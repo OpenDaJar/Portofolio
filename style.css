@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* VARIABLES */
+
+:root {
+  /* Fonts */
+  --FF: "Roboto", sans-serif;
+  --FF-PIXEL: "DotGothic16", "Roboto", sans-serif;
+  --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+  /* Colors */
+  --BG-COLOR: hsl(0, 1%, 14%);
+  --BG-COLOR-NAV: #121212;
+  --COLOR: whitesmoke;
+  --BORDER-COLOR: yellow;
+
+  /* Borders */
+  --BORDERS: 1px solid var(--BORDER-COLOR);
+}
+
+/* UTILITY CLASSES */
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+/* GENERAL STYLES */
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--FS);
+  font-family: var(--FF);
+  background-color: var(--BG-COLOR);
+  color: var(--COLOR);
+}
+
+body {
+  height: 100%;
+  /* border: var(--BORDERS); */
+  /* min-height: 100%; */
+  font-size: 1rem;
+  display: flex;
+  /* gap: 1rem; */
+}
+
+main {
+  width: 100%;
+  height: auto;
+  margin: 1rem;
+  /* border: var(--BORDERS); */
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+  transition: 1s;
+}
+
+p {
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+nav {
+  background-color: var(--BG-COLOR-NAV);
+  overflow: hidden;
+  visibility: collapse;
+  z-index: 1;
+  width: 0%;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* border: var(--BORDERS); */
+  transition: 0.5s;
+  white-space: nowrap;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #818181;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  margin: 0.3rem;
+}
+
+nav a:hover {
+  color: #f1f1f1;
+}
+
+.btn_expand {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  position: sticky;
+  top: 50%;
+  background-color: var(--BG-COLOR-NAV);
+  cursor: pointer;
+}
+
+.arrow_expand {
+  rotate: 0;
+  transition: 0.5s;
+}
