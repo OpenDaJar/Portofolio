@@ -7,19 +7,37 @@
     <title>Portofolio</title>
   </head>
   <body onload="welcomeTransform()">
+    
     <nav id="sidebar">
-      <a href="#about">About Me</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact Me</a>
+      <section id="profile" class="sidebar__profile">PROFILE</section>
+      <section id="links" class="sidebar__links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </section>
+      <section id="media" class="sidebar__media">MEDIA</section>
     </nav>
 
-    <button id="btn_expand" class="btn_expand" type="button" onclick="expandButton()">
-      <img id="arrow_expand" class="arrow_expand" src="/img/arrow_right_icon.svg" alt="Expand Arrow" />
+    <button
+      class="btn_expand"
+      type="button"
+      onclick="expandButton()"
+    >
+      <img
+        id="arrow_expand"
+        class="arrow_expand"
+        src="/img/arrow_right_icon.svg"
+        alt="Expand Arrow"
+      />
     </button>
     <main id="main">
-      <section id="welcome">
-        <h1>Welcome</h1>
+      <!-- Welcome Message section -->
+      <section id="welcome" class="welcome">
+        <span id="welcome__changed" class="welcome__changed"></span>
+        <span class="welcome__cursor">_</span>
+        <span id="welcome__original" class="welcome__original">Welcome to my Portofolio</span>
       </section>
+      <!-- About section -->
       <section id="about">
         <h1>About me</h1>
         <p>
@@ -31,6 +49,7 @@
           magni perferendis nisi enim.
         </p>
       </section>
+      <!-- Experience section -->
       <section id="experience">
         <h1>Experience</h1>
         <p>
@@ -42,6 +61,7 @@
           voluptates qui? Iste.
         </p>
       </section>
+      <!-- Contact section -->
       <section id="contact">
         <h1>Contact Information</h1>
         <p>

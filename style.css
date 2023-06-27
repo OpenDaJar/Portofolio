@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
 /* RESET */
 
 * {
@@ -21,7 +23,8 @@ img {
 :root {
   /* Fonts */
   --FF: "Roboto", sans-serif;
-  --FF-PIXEL: "DotGothic16", "Roboto", sans-serif;
+  /* --FF-PIXEL: "DotGothic16", "Roboto", sans-serif; */
+  --FF-PIXEL: "VT323", monospace;
   --FS: clamp(1rem, 2.2vh, 1.5rem);
 
   /* Colors */
@@ -29,6 +32,7 @@ img {
   --BG-COLOR-NAV: #121212;
   --COLOR: whitesmoke;
   --BORDER-COLOR: yellow;
+  --CURSOR-COLOR: rgb(207, 180, 23);
 
   /* Borders */
   --BORDERS: 1px solid var(--BORDER-COLOR);
@@ -58,7 +62,7 @@ body {
   height: 100%;
   /* border: var(--BORDERS); */
   /* min-height: 100%; */
-  font-size: 1rem;
+  /* font-size: 1rem; */
   display: flex;
   /* gap: 1rem; */
 }
@@ -71,7 +75,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10rem;
-  transition: 1s;
+  /* transition: 1s; */
 }
 
 p {
@@ -80,6 +84,7 @@ p {
   margin: 1rem;
 }
 
+/* Sidebar */
 nav {
   background-color: var(--BG-COLOR-NAV);
   overflow: hidden;
@@ -94,13 +99,16 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  /* border: var(--BORDERS); */
+  justify-content: space-between;
   transition: 0.5s;
   white-space: nowrap;
 }
-nav a {
-  display: block;
+
+.sidebar__links a {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   text-decoration: none;
   color: #818181;
   transition: 0.3s;
@@ -108,7 +116,7 @@ nav a {
   margin: 0.3rem;
 }
 
-nav a:hover {
+.sidebar__links a:hover {
   color: #f1f1f1;
 }
 
@@ -127,4 +135,40 @@ nav a:hover {
 .arrow_expand {
   rotate: 0;
   transition: 0.5s;
+}
+
+/* Welcome section */
+.welcome {
+  font-size: 2rem;
+}
+
+.welcome span {
+  letter-spacing: 0.5rem;
+  color: var(--COLOR);
+}
+.welcome::before {
+  content: '{"';
+}
+
+.welcome::after {
+  content: '"}';
+}
+
+.welcome__original {
+  font-family: var(--FF-PIXEL);
+  font-size: 2.7rem;
+}
+
+.welcome__changed {
+  font-family: var(--FF);
+}
+
+.welcome__cursor {
+  animation: cursor 1s steps(2) infinite;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
 }
