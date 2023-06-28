@@ -1,7 +1,3 @@
-// import * as sidebar from "./sidebar.js";
-console.log("Hello from JS");
-// sidebar.test()
-
 //Welcome text transform
 const welcomeTransform = () => {
   const welcomeTextElement = document.getElementById("welcome__original");
@@ -10,7 +6,6 @@ const welcomeTransform = () => {
   let changedText = [];
   textToChange.forEach((letter, i) => {
     setTimeout(() => {
-      // letterElement.innerText = letter
       changedText.push(letter);
       changedTextElement.innerText = changedText.join("");
 
@@ -23,7 +18,7 @@ const welcomeTransform = () => {
 // Expand/collapse btn for sidebar
 const expandButton = () => {
   const sidebarElement = document.getElementById("sidebar");
-  const mainElement =  document.getElementById("main")
+  const mainElement = document.getElementById("main");
   const sidebarStyles = window.getComputedStyle(sidebarElement);
   const sidebarVisibility = sidebarStyles.visibility;
   const arrowExpand = document.getElementById("arrow_expand");
@@ -45,4 +40,31 @@ const expandButton = () => {
     //main
     mainElement.style.width = "80%";
   }
+};
+
+// Observer for sections
+const options = {
+  root: null,
+  threshold: 0.5,
+  rootMargin: "0px",
+};
+
+const sectionsToFade = document.querySelectorAll("section.fade");
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle("fade-in");
+    observer.unobserve(entry.target);
+  });
+}, options);
+
+sectionsToFade.forEach((section) => {
+  observer.observe(section);
+});
+
+// TEST
+const test = () => {
+  console.log("test");
 };
