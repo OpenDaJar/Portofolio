@@ -4,89 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>Portofolio</title>
   </head>
-  <body onload="welcomeTransform()">
-    
-    <nav id="sidebar">
-      <section id="profile" class="sidebar__profile">PROFILE</section>
-      <section id="links" class="sidebar__links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </section>
-      <section id="media" class="sidebar__media">MEDIA</section>
-    </nav>
+  <body onload="onLoad()">
+    <div class="container">
+      <nav id="sidebar">
+        <section id="profile" class="sidebar__profile">
+          <figure>
+            <img
+              src="./img/test_profile.png"
+              alt="Profile Image"
+              class="figure__img"
+              width="150"
+              height="150"
+            />
+            <figcaption>Web Developer</figcaption>
+          </figure>
+        </section>
+        <section id="links" class="sidebar__links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#contact">Contact</a>
+        </section>
+        <section id="media" class="sidebar__media">
+          <i class="fa-brands fa-linkedin svg"></i>
+          <i class="fa-brands fa-square-github svg"></i>
+        </section>
+      </nav>
+      <!-- Btn expand -->
+      <button class="btn_expand" type="button" onclick="expandButton()">
+        <img
+          id="arrow_expand"
+          class="arrow_expand"
+          src="/img/arrow_right_icon.svg"
+          alt="Expand Arrow"
+        />
+      </button>
 
-    <button
-      class="btn_expand"
-      type="button"
-      onclick="expandButton()"
-    >
-      <img
-        id="arrow_expand"
-        class="arrow_expand"
-        src="/img/arrow_right_icon.svg"
-        alt="Expand Arrow"
-      />
-    </button>
-    <main id="main">
-      <!-- Welcome Message section -->
-      <section id="welcome" class="welcome">
-        <span id="welcome__changed" class="welcome__changed"></span>
-        <span class="welcome__cursor">_</span>
-        <span id="welcome__original" class="welcome__original">Welcome to my Portofolio</span>
-      </section>
-      <!-- About section -->
-      <section id="about" class="fade">
-        <h1>About me</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos tempora
-          aliquam voluptates quisquam rem quaerat accusantium culpa perspiciatis
-          doloremque dicta illum earum, delectus pariatur? Doloribus veritatis,
-          quibusdam quaerat debitis sed voluptatibus quasi consequatur voluptate
-          qui dicta a ullam eaque id dignissimos quia excepturi quod ea soluta
-          magni perferendis nisi enim.
-        </p>
-      </section>
-      <!-- Experience section -->
-      <section id="experience" class="fade">
-        <h1>Experience</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sunt
-          nostrum porro placeat natus enim quidem, doloremque ratione, quas
-          eaque asperiores odio quam veritatis alias. Incidunt eum temporibus
-          obcaecati dicta ullam officia pariatur aut sit enim aperiam laborum
-          beatae commodi optio quae voluptate ad expedita error repellat,
-          voluptates qui? Iste.
-        </p>
-      </section>
-      <!-- Skills section -->
-      <section id="skills" class="fade">
-        <h1>Skills</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sunt
-          nostrum porro placeat natus enim quidem, doloremque ratione, quas
-          eaque asperiores odio quam veritatis alias. Incidunt eum temporibus
-          obcaecati dicta ullam officia pariatur aut sit enim aperiam laborum
-          beatae commodi optio quae voluptate ad expedita error repellat,
-          voluptates qui? Iste.
-        </p>
-      </section>
-      <!-- Contact section -->
-      <section id="contact" class="fade">
-        <h1>Contact Information</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente,
-          molestias accusamus porro, et, neque ab in nihil dicta culpa saepe
-          quae iste excepturi officiis! Sequi dolores nisi, quasi harum quis
-          aliquid amet repudiandae vitae, iste nam deleniti exercitationem dicta
-          aliquam veniam aut alias accusantium voluptatem error molestiae labore
-          repellendus reprehenderit!
-        </p>
-      </section>
-    </main>
+      <main id="main">
+        <!-- Welcome Message section -->
+        <section id="welcome" class="welcome">
+          <h1>
+            Hi,<br />
+            I'm Mike, <br />
+          </h1>
+          <div>
+            <span id="welcome__changed" class="welcome__changed"></span>
+            <span class="welcome__cursor">_</span>
+            <span id="welcome__original" class="welcome__original"
+              >Web Developer</span
+            >
+          </div>
+        </section>
+        <!-- About section -->
+        <section id="about" class="fade">
+          <h1 class="section_header">About me</h1>
+          <article class="section_article">
+            Lorem articlesum dolor sit amet consectetur adarticleisicing elit.
+            Quos tempora aliquam voluptates quisquam rem quaerat accusantium
+            culpa perspiciatis doloremque dicta illum earum, delectus pariatur?
+            Doloribus veritatis, quibusdam quaerat debitis sed voluptatibus
+            quasi consequatur voluptate qui dicta a ullam eaque id dignissimos
+            quia excepturi quod ea soluta magni perferendis nisi enim.
+          </article>
+        </section>
+        <!-- Experience section -->
+        <section id="experience" class="fade">
+          <h1 class="section_header">Experience</h1>
+          <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sunt
+            nostrum porro placeat natus enim quidem, doloremque ratione, quas
+            eaque asperiores odio quam veritatis alias. Incidunt eum temporibus
+            obcaecati dicta ullam officia pariatur aut sit enim aperiam laborum
+            beatae commodi optio quae voluptate ad expedita error repellat,
+            voluptates qui? Iste.
+          </article>
+        </section>
+        <!-- Skills section -->
+        <section id="timeline" class="fade">
+          <h1 class="section_header">Timeline</h1>
+          <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque sunt
+            nostrum porro placeat natus enim quidem, doloremque ratione, quas
+            eaque asperiores odio quam veritatis alias. Incidunt eum temporibus
+            obcaecati dicta ullam officia pariatur aut sit enim aperiam laborum
+            beatae commodi optio quae voluptate ad expedita error repellat,
+            voluptates qui? Iste.
+          </article>
+        </section>
+        <!-- Contact section -->
+        <section id="contact" class="fade">
+          <h1 class="section_header">Contact Information</h1>
+          <article>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente,
+            molestias accusamus porro, et, neque ab in nihil dicta culpa saepe
+            quae iste excepturi officiis! Sequi dolores nisi, quasi harum quis
+            aliquid amet repudiandae vitae, iste nam deleniti exercitationem
+            dicta aliquam veniam aut alias accusantium voluptatem error
+            molestiae labore repellendus reprehenderit!
+          </article>
+        </section>
+      </main>
+    </div>
+    <!-- Btn scroll top -->
+    <a href="#welcome"> <i id="arrow-top" class="fa-solid fa-angles-up svg scroll-top-btn"></i></a>
+   
 
     <!-- Js module -->
     <!-- <script type="module" src="/myscripts.js"></script> -->

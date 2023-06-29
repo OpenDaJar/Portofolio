@@ -1,3 +1,10 @@
+// On Load
+const onLoad = () => {
+  welcomeTransform();
+  observeRedirectHome();
+  observeSections();
+};
+
 //Welcome text transform
 const welcomeTransform = () => {
   const welcomeTextElement = document.getElementById("welcome__original");
@@ -43,26 +50,52 @@ const expandButton = () => {
 };
 
 // Observer for sections
-const options = {
-  root: null,
-  threshold: 0.5,
-  rootMargin: "0px",
+const observeSections = () => {
+  const options = {
+    root: null,
+    threshold: 0.5,
+    rootMargin: "0px",
+  };
+
+  const sectionsToFade = document.querySelectorAll("section.fade");
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+      entry.target.classList.toggle("fade-in");
+      observer.unobserve(entry.target);
+    });
+  }, options);
+
+  sectionsToFade.forEach((section) => {
+    observer.observe(section);
+  });
 };
 
-const sectionsToFade = document.querySelectorAll("section.fade");
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
-      return;
-    }
-    entry.target.classList.toggle("fade-in");
-    observer.unobserve(entry.target);
-  });
-}, options);
+// Arrow to Home
+const observeRedirectHome = () => {
+  const welcomeEl = document.getElementById('welcome')
+  const arrowTop = document.getElementById("arrow-top");
+  const options = {
+    root: null,
+    threshold: 0.5,
+    rootMargin: "0px",
+  };
 
-sectionsToFade.forEach((section) => {
-  observer.observe(section);
-});
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // entry.target.style.display = "none";
+        arrowTop.style.display = "none";
+      }else{
+        arrowTop.style.display = "block";
+      }
+    });
+  }, options);
+
+  observer.observe(welcomeEl);
+};
 
 // TEST
 const test = () => {
