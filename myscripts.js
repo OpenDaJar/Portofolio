@@ -3,9 +3,9 @@ const onLoad = () => {
   welcomeTransform();
   observeRedirectHome();
   observeSections();
+  observeBookmarks();
 };
 
-//Welcome text transform
 const welcomeTransform = () => {
   const welcomeTextElement = document.getElementById("welcome__original");
   const changedTextElement = document.getElementById("welcome__changed");
@@ -36,6 +36,7 @@ const expandButton = () => {
     // sidebar
     sidebarElement.style.visibility = "collapse";
     sidebar.style.width = "0%";
+    sidebarElement.style.animation = "none";
     //main
     mainElement.style.width = "100%";
   } else if (sidebarVisibility === "collapse") {
@@ -44,16 +45,18 @@ const expandButton = () => {
     // sidebar
     sidebarElement.style.visibility = "visible";
     sidebar.style.width = "20%";
+    sidebarElement.style.animation = "fade 1s";
+
     //main
     mainElement.style.width = "80%";
   }
 };
 
-// Observer for sections
+// Observer for sections (Fade)
 const observeSections = () => {
   const options = {
     root: null,
-    threshold: 0.5,
+    threshold: 0.25,
     rootMargin: "0px",
   };
 
@@ -73,9 +76,44 @@ const observeSections = () => {
   });
 };
 
+//Observe and change colors on sidebar bookmarks
+const observeBookmarks = () => {
+  const options = {
+    root: null,
+    threshold: 0,
+    rootMargin: "0px",
+  };
+  const linksObj = [
+    {
+      id: "about",
+      element: document.getElementById("links__about"),
+    },
+    {
+      id: "experience",
+      element: document.getElementById("links__experience"),
+    },
+    {
+      id: "contact",
+      element: document.getElementById("links__contact"),
+    },
+  ];
+  const sectionsElements = document.querySelectorAll("section.fade");
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      const currentObj = linksObj.filter((obj) => obj.id === entry.target.id);
+      if (entry.isIntersecting)
+        currentObj[0].element.style.color = "var(--COLOR-FANCY)";
+      else currentObj[0].element.style.color = "var(--COLOR)";
+    });
+  });
+  sectionsElements.forEach((section) => {
+    observer.observe(section);
+  });
+};
+
 // Arrow to Home
 const observeRedirectHome = () => {
-  const welcomeEl = document.getElementById('welcome')
+  const welcomeEl = document.getElementById("welcome");
   const arrowTop = document.getElementById("arrow-top");
   const options = {
     root: null,
@@ -88,7 +126,7 @@ const observeRedirectHome = () => {
       if (entry.isIntersecting) {
         // entry.target.style.display = "none";
         arrowTop.style.display = "none";
-      }else{
+      } else {
         arrowTop.style.display = "block";
       }
     });
