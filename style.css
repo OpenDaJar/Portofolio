@@ -28,6 +28,7 @@ img {
   --BG-COLOR: hsl(0, 1%, 14%);
   --BG-COLOR-NAV: #121212;
   --COLOR: rgb(245, 245, 245);
+  --COLOR-DARKER: hsla(0, 0%, 98%, 0.9);
   --COLOR-FANCY: #38e1ff;
   --SVG-COLOR: whitesmoke;
   --BORDER-COLOR: yellow;
@@ -68,6 +69,7 @@ h3,
 h4 {
   color: var(--COLOR-FANCY);
   text-decoration: underline;
+  text-align: center;
 }
 
 h2 {
@@ -118,6 +120,29 @@ p {
   padding: 1rem;
 }
 
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--COLOR) ;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--COLOR-DARKER); 
+}
+
 /* SIDEBAR */
 nav {
   font-size: 1.5rem;
@@ -131,6 +156,7 @@ nav {
   left: 0;
   top: 0;
   height: 100vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -159,7 +185,9 @@ nav {
 
 .btn_expand {
   width: 3rem;
+  min-width: 40px;
   height: 3rem;
+  min-height: 40px;
   border: none;
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
