@@ -103,6 +103,10 @@ h2 {
 
 .container {
   height: 100%;
+  /* 
+  /* min-height: 100vh; */
+  /* min-width: 915px; */
+
   display: flex;
 }
 
@@ -113,6 +117,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  /* flex-grow: 1; */
 }
 
 p {
@@ -128,19 +134,19 @@ p {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--COLOR) ;
+  background: var(--COLOR);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--COLOR-DARKER); 
+  background: var(--COLOR-DARKER);
 }
 
 /* SIDEBAR */
@@ -155,8 +161,15 @@ nav {
   position: sticky;
   left: 0;
   top: 0;
+  bottom: 0;
   height: 100vh;
   overflow-y: auto;
+  /* min-height: 100%; */
+  /* min-height: 100vh; */
+  /* flex-shrink: 0;
+  flex-grow: 1; */
+  /* flex: 1; */
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -367,6 +380,7 @@ li {
 
 .about-lists ul {
   list-style: none;
+  padding-top: 1rem;
 }
 
 /* EXPERIENCE SECTION */
@@ -491,6 +505,14 @@ li {
   }
 }
 
+
+/* CONTACT SECTION */
+.contact{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-evenly;
+}
+
 /* SVG */
 .svg {
   font-size: 40px;
@@ -500,4 +522,15 @@ li {
 .svg:hover {
   cursor: pointer;
   color: var(--COLOR-FANCY);
+}
+
+/* MEDIA */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 85%;
+  }
+
+  .svg:hover {
+    color: var(--SVG-COLOR);
+  }
 }

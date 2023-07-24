@@ -1,5 +1,9 @@
 // On Load
 const onLoad = () => {
+  const width = window.screen.width;
+  const expandBtn = document.getElementById("btn_expand");
+
+  if (width <= 600) expandBtn.style.display = "none";
   welcomeTransform();
   observeRedirectHome();
   observeSections();
@@ -30,6 +34,7 @@ const expandButton = () => {
   const sidebarVisibility = sidebarStyles.visibility;
   const arrowExpand = document.getElementById("arrow_expand");
 
+  //sidebar close
   if (sidebarVisibility === "visible") {
     //Arrow expand rotate
     arrowExpand.style.rotate = "0deg";
@@ -39,6 +44,7 @@ const expandButton = () => {
     sidebarElement.style.animation = "none";
     //main
     mainElement.style.width = "100%";
+    //sidebar open
   } else if (sidebarVisibility === "collapse") {
     //Arrow expand rotate
     arrowExpand.style.rotate = "180deg";
