@@ -25,7 +25,7 @@ img {
   /* --FS:1.5rem; */
 
   /* Colors */
-  --BG-COLOR: hsl(0, 1%, 14%);
+  --BG-COLOR: #242323;
   --BG-COLOR-NAV: #121212;
   --COLOR: rgb(245, 245, 245);
   --COLOR-DARKER: hsla(0, 0%, 98%, 0.9);
