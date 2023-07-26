@@ -76,6 +76,37 @@ h2 {
   text-align: center;
 }
 
+section h2:before{
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  content:"<h2> ";
+  display:inline-block;
+  color: var(--COLOR);
+}
+
+section h2:after{
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  content:" </h2>";
+  display:inline-block;
+  color: var(--COLOR);
+
+}
+
+p:before{
+  font-size: 1rem;
+  display:inline-block;
+  color: var(--COLOR);
+  content: "<p>";
+}
+
+p:after{
+  font-size: 1rem;
+  display:inline-block;
+  color: var(--COLOR);
+  content: "</p>";
+}
+
 /* Scroll Top Btn */
 .scroll-top-btn {
   width: 50px;
@@ -103,6 +134,7 @@ h2 {
 
 .container {
   height: 100%;
+  width: 100%;
   /* 
   /* min-height: 100vh; */
   /* min-width: 915px; */
@@ -113,7 +145,7 @@ h2 {
 main {
   width: 100%;
   height: auto;
-  margin: 1rem;
+  /* margin: 1rem; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -516,7 +548,8 @@ li {
 
 .contact span{
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: start;
   gap: 0.3rem;
 }
 
@@ -549,10 +582,10 @@ li {
 
 /* MEDIA */
 @media only screen and (max-width: 600px) {
-  .container {
-    width: 85%;
+  section{
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
   }
-
   .svg:hover {
     color: var(--SVG-COLOR);
   }
