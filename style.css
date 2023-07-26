@@ -511,6 +511,29 @@ li {
   display: flex;
   gap: 1rem;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.contact span{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.contact__img{
+  height: 40px;
+  width: auto;
+  display: inline;
+}
+
+.contact a {
+  text-decoration: none;
+  color: var(--COLOR);
+  transition: 0.5s;
+}
+
+.contact a:hover {
+  color: var(--COLOR-FANCY)
 }
 
 /* SVG */
