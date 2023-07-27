@@ -95,6 +95,10 @@ const observeBookmarks = () => {
       element: document.getElementById("links__about"),
     },
     {
+      id: "skills",
+      element: document.getElementById("links__skills"),
+    },
+    {
       id: "experience",
       element: document.getElementById("links__experience"),
     },

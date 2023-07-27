@@ -29,8 +29,8 @@ img {
   --BG-COLOR-NAV: #121212;
   --COLOR: rgb(245, 245, 245);
   --COLOR-DARKER: hsla(0, 0%, 98%, 0.9);
-  /* --COLOR-FANCY: #38e1ff; */
-  --COLOR-FANCY: #ffffff;
+  --COLOR-FANCY: #38e1ff;
+  /* --COLOR-FANCY: #ffffff; */
   --SVG-COLOR: whitesmoke;
   --BORDER-COLOR: yellow;
   --CURSOR-COLOR: rgb(207, 180, 23);
@@ -68,7 +68,7 @@ body {
 h2,
 h3,
 h4 {
-  color: var(--COLOR-FANCY);
+  color: var(--COLOR);
   /* text-decoration: underline; */
   text-align: center;
 }
@@ -80,7 +80,8 @@ h2 {
 section h2:before{
   font-size: 1rem;
   letter-spacing: 0.1rem;
-  content:"<h2> ";
+  padding-right: 0.4rem;
+  content:"<h2>";
   display:inline-block;
   color: var(--COLOR);
 }
@@ -88,7 +89,8 @@ section h2:before{
 section h2:after{
   font-size: 1rem;
   letter-spacing: 0.1rem;
-  content:" </h2>";
+  padding-left: 0.4rem;
+  content:"</h2>";
   display:inline-block;
   color: var(--COLOR);
 
@@ -97,6 +99,7 @@ section h2:after{
 section h3:before{
   font-size: 1rem;
   letter-spacing: 0.1rem;
+  padding-right: 0.4rem;
   content:"<h3> ";
   display:inline-block;
   color: var(--COLOR);
@@ -105,6 +108,7 @@ section h3:before{
 section h3:after{
   font-size: 1rem;
   letter-spacing: 0.1rem;
+  padding-left: 0.4rem;
   content:" </h3>";
   display:inline-block;
   color: var(--COLOR);
@@ -179,19 +183,19 @@ p {
 /* SCROLLBAR */
 /* width */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--COLOR);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* Handle on hover */
@@ -342,7 +346,7 @@ section {
 
 .glass {
   /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.01);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0px);
@@ -559,6 +563,8 @@ li {
 /* CONTACT SECTION */
 .contact{
   display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
   gap: 1rem;
   justify-content: space-evenly;
   flex-wrap: wrap;
