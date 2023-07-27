@@ -29,7 +29,8 @@ img {
   --BG-COLOR-NAV: #121212;
   --COLOR: rgb(245, 245, 245);
   --COLOR-DARKER: hsla(0, 0%, 98%, 0.9);
-  --COLOR-FANCY: #38e1ff;
+  /* --COLOR-FANCY: #38e1ff; */
+  --COLOR-FANCY: #ffffff;
   --SVG-COLOR: whitesmoke;
   --BORDER-COLOR: yellow;
   --CURSOR-COLOR: rgb(207, 180, 23);
@@ -68,7 +69,7 @@ h2,
 h3,
 h4 {
   color: var(--COLOR-FANCY);
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-align: center;
 }
 
@@ -88,6 +89,23 @@ section h2:after{
   font-size: 1rem;
   letter-spacing: 0.1rem;
   content:" </h2>";
+  display:inline-block;
+  color: var(--COLOR);
+
+}
+
+section h3:before{
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  content:"<h3> ";
+  display:inline-block;
+  color: var(--COLOR);
+}
+
+section h3:after{
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  content:" </h3>";
   display:inline-block;
   color: var(--COLOR);
 
@@ -549,7 +567,7 @@ li {
 .contact span{
   display: flex;
   justify-content: flex-start;
-  align-items: start;
+  align-items: center;
   gap: 0.3rem;
 }
 
@@ -563,6 +581,7 @@ li {
   text-decoration: none;
   color: var(--COLOR);
   transition: 0.5s;
+
 }
 
 .contact a:hover {
