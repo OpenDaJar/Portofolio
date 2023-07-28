@@ -54,8 +54,7 @@ const expandButton = () => {
     if (window.innerWidth <= 900) {
       sidebarElement.style.width = "30%";
       mainElement.style.width = "70%";
-    } 
-    else {
+    } else {
       sidebarElement.style.width = "20%";
 
       //main
@@ -117,9 +116,16 @@ const observeBookmarks = () => {
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       const currentObj = linksObj.filter((obj) => obj.id === entry.target.id);
-      if (entry.isIntersecting)
-        currentObj[0].element.style.color = "var(--COLOR-FANCY)";
-      else currentObj[0].element.style.color = "var(--COLOR)";
+      // if (entry.isIntersecting)
+      //   currentObj[0].element.style.color = "var(--COLOR-FANCY)";
+      // else currentObj[0].element.style.color = "var(--COLOR)";
+      if (entry.isIntersecting) {
+        currentObj[0].element.style.textShadow = "var(--TEXT-SHADOW)";
+        currentObj[0].element.style.color = "#f5f5f5";
+      } else {
+        currentObj[0].element.style.textShadow = "none";
+        currentObj[0].element.style.color = "#818181";
+      }
     });
   });
   sectionsElements.forEach((section) => {
