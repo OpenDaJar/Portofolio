@@ -3,8 +3,8 @@ const onLoad = () => {
   const width = window.screen.width;
   const expandBtn = document.getElementById("btn_expand");
 
-  if (width <= 600) expandBtn.style.display = "none";
-  welcomeTransform();
+  if (width <= 720) expandBtn.style.display = "none";
+  // welcomeTransform();
   observeRedirectHome();
   observeSections();
   observeBookmarks();
@@ -34,27 +34,33 @@ const expandButton = () => {
   const sidebarVisibility = sidebarStyles.visibility;
   const arrowExpand = document.getElementById("arrow_expand");
 
-  //sidebar close
+  //sidebar closed
   if (sidebarVisibility === "visible") {
     //Arrow expand rotate
     arrowExpand.style.rotate = "0deg";
     // sidebar
     sidebarElement.style.visibility = "collapse";
-    sidebar.style.width = "0%";
+    sidebarElement.style.width = "0%";
     sidebarElement.style.animation = "none";
     //main
     mainElement.style.width = "100%";
-    //sidebar open
+    //sidebar opened
   } else if (sidebarVisibility === "collapse") {
     //Arrow expand rotate
     arrowExpand.style.rotate = "180deg";
     // sidebar
     sidebarElement.style.visibility = "visible";
-    sidebar.style.width = "20%";
     sidebarElement.style.animation = "fade 1s";
+    if (window.innerWidth <= 900) {
+      sidebarElement.style.width = "30%";
+      mainElement.style.width = "70%";
+    } 
+    else {
+      sidebarElement.style.width = "20%";
 
-    //main
-    mainElement.style.width = "80%";
+      //main
+      mainElement.style.width = "80%";
+    }
   }
 };
 
