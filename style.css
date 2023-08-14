@@ -21,22 +21,23 @@ img {
   /* Fonts */
   --FF: "Roboto", sans-serif;
   --FF-PIXEL: "VT323", monospace;
-  /* --FS: clamp(1rem, 2.2vh, 1.5rem); */
-  --FS:1.2rem;
-  --FS-WELCOME:2em;
-  --FS-CODE:0.7em;
-  --FS-CODE-TITLE:0.4em;
-  /* --FS:1.5rem; */
+  --FS: 1.2rem;
+  --FS-WELCOME: 2em;
+  --FS-CODE: 0.7em;
+  --FS-CODE-TITLE: 0.4em;
 
   /* Colors */
   --BG-COLOR: #242323;
   --BG-COLOR-NAV: #121212;
-  --BG-GRAD:linear-gradient(45deg, rgba(66,93,142,1) 13%, rgba(130,49,184,1) 51%, rgba(81,16,193,1) 100%);
+  --BG-GRAD: linear-gradient(
+    45deg,
+    rgba(66, 93, 142, 1) 13%,
+    rgba(130, 49, 184, 1) 51%,
+    rgba(81, 16, 193, 1) 100%
+  );
   --COLOR: #f5f5f5;
   --COLOR-DARKER: rgba(250, 250, 250, 0.5);
-  /* --COLOR-FANCY: #38e1ff; */
   --COLOR-FANCY: #5b78af;
-  /* --COLOR-FANCY: #ffffff; */
   --SVG-COLOR: whitesmoke;
   --BORDER-COLOR: yellow;
   --CURSOR-COLOR: rgb(207, 180, 23);
@@ -45,8 +46,8 @@ img {
   --BORDERS: 1px solid var(--BORDER-COLOR);
 
   /* TEXT SHADOW */
-  --TEXT-SHADOW:2px 7px 5px rgba(158, 158, 158,0.2), 
-  0px -4px 10px rgba(158, 158, 1,0.5);
+  --TEXT-SHADOW: 2px 7px 5px rgba(158, 158, 158, 0.2),
+    0px -4px 10px rgba(158, 158, 1, 0.5);
 }
 
 /* UTILITY CLASSES */
@@ -65,13 +66,11 @@ html {
   scroll-behavior: smooth;
   font-size: var(--FS);
   font-family: var(--FF);
-  /* background-color: var(--BG-COLOR); */
-
   color: var(--COLOR);
 }
 
 body {
-  background:var(--BG-GRAD);
+  background: var(--BG-GRAD);
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -81,8 +80,6 @@ h2,
 h3,
 h4 {
   color: var(--COLOR);
-  /* font-size: 1.5em; */
-  /* text-decoration: underline; */
   text-align: center;
 }
 
@@ -90,69 +87,48 @@ h2 {
   text-align: center;
 }
 
-section h2:before,section h2:after
-{
+section h2:before,
+section h2:after {
   font-family: var(--FF-PIXEL);
   font-size: var(--FS-CODE);
   letter-spacing: 0.1em;
   padding-right: 0.4em;
-  display:inline-block;
+  display: inline-block;
   color: var(--COLOR-DARKER);
 }
 
-section h2:before{
+section h2:before {
   letter-spacing: 0.1em;
   padding-right: 0.4em;
-  content:"<h2>";
+  content: "<h2>";
 }
 
-section h2:after{
+section h2:after {
   padding-left: 0.4em;
-  content:"</h2>";
+  content: "</h2>";
 }
-p:before,p:after{
+p:before,
+p:after {
   font-size: var(--FS-CODE);
-  display:inline-block;
+  display: inline-block;
   color: var(--COLOR-DARKER);
 }
 
 p {
-  /* font-size: 1.2em; */
   padding: 1em;
 }
 
-p:before,p:after{
+p:before,
+p:after {
   font-family: var(--FF-PIXEL);
 }
-p:before{
+p:before {
   content: "<p>";
 }
 
-p:after{
-  
+p:after {
   content: "</p>";
 }
-
-/* section h3:before{
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  padding-right: 0.4em;
-  content:"<h3> ";
-  display:inline-block;
-  color: var(--COLOR);
-}
-
-section h3:after{
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  padding-left: 0.4em;
-  content:" </h3>";
-  display:inline-block;
-  color: var(--COLOR);
-
-} */
-
-
 
 /* Scroll Top Btn */
 .scroll-top-btn {
@@ -188,16 +164,10 @@ section h3:after{
 main {
   width: 100%;
   height: auto;
-  /* margin: 1rem; */
   display: flex;
   flex-direction: column;
-  
   gap: 1rem;
-
-  /* flex-grow: 1; */
 }
-
-
 
 /* SCROLLBAR */
 
@@ -208,7 +178,6 @@ main {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  /* box-shadow: inset 0 0 5px grey; */
   border-radius: 5px;
   background: rgba(0, 0, 0, 1);
 }
@@ -220,15 +189,12 @@ main {
   border-radius: 5px;
 }
 
-
-
 /* SIDEBAR */
 nav {
   font-size: 1em;
   background-color: var(--BG-COLOR-NAV);
   overflow: hidden;
   visibility: collapse;
-  /* visibility: visible; */
   z-index: 1;
   width: 0%;
   position: -webkit-sticky; /* Safari */
@@ -238,25 +204,17 @@ nav {
   bottom: 0;
   height: 100vh;
   overflow-y: auto;
-  /* min-height: 100%; */
-  /* min-height: 100vh; */
-  /* flex-shrink: 0;
-  flex-grow: 1; */
-  /* flex: 1; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   transition: 0.5s;
   white-space: nowrap;
-  /* border-top-right-radius: 5%;
-  border-bottom-right-radius: 5%; */
 }
 
-.sidebar__links a i{
+.sidebar__links a i {
   display: flex;
-  color:var(--COLOR);
+  color: var(--COLOR);
   justify-content: center;
   align-items: center;
   height: 1em;
@@ -273,17 +231,11 @@ nav {
   text-decoration: none;
   color: #818181;
   transition: 0.3s;
-  /* font-size: 1.5rem; */
   margin: 12px 0px;
-
-  
-  
 }
 
 .sidebar__links a:hover {
   color: #f1f1f1;
-  /* text-shadow: var(--TEXT-SHADOW) */
-  
 }
 
 .btn_expand {
@@ -329,7 +281,6 @@ figure {
 }
 
 .figure__img {
-  /* height: 100px; */
   height: 7em;
 }
 
@@ -345,7 +296,8 @@ figcaption {
   opacity: 0;
 }
 
-.fade-in,.fade-out{
+.fade-in,
+.fade-out {
   animation: fade 2s;
   animation-fill-mode: forwards;
 }
@@ -412,17 +364,16 @@ section {
   color: var(--COLOR);
 }
 
-h1{
+h1 {
   font-size: var(--FS-WELCOME);
   font-family: var(--FF-PIXEL);
 }
 
-h1:before,h1::after{
+h1:before,
+h1::after {
   font-size: var(--FS-CODE-TITLE);
   color: var(--COLOR-DARKER);
   letter-spacing: 0.1em;
-
-  
 }
 
 h1:before {
@@ -430,11 +381,11 @@ h1:before {
 }
 
 h1:after {
-  /* font-family: var(--FF); */
   content: "</title>";
 }
 
-.welcome__changed::before ,.welcome__original::after{
+.welcome__changed::before,
+.welcome__original::after {
   letter-spacing: 0.1em;
   font-size: 1em;
 }
@@ -624,9 +575,8 @@ li {
   }
 }
 
-
 /* CONTACT SECTION */
-.contact{
+.contact {
   display: flex;
   flex-direction: column;
   padding-left: 3rem;
@@ -635,14 +585,14 @@ li {
   flex-wrap: wrap;
 }
 
-.contact span{
+.contact span {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0.3rem;
 }
 
-.contact__img{
+.contact__img {
   height: 40px;
   width: auto;
   display: inline;
@@ -652,12 +602,7 @@ li {
   text-decoration: none;
   color: var(--COLOR);
   transition: 0.5s;
-
 }
-
-/* .contact a:hover {
-  color: var(--COLOR-FANCY)
-} */
 
 /* SVG */
 .svg {
@@ -667,24 +612,23 @@ li {
 
 .svg:hover {
   cursor: pointer;
-  /* color: var(--COLOR-FANCY); */
 }
 
 /* MEDIA */
-@media only screen and (max-width: 1050px){
-  :root{
-    --FS:0.9rem;
+@media only screen and (max-width: 1050px) {
+  :root {
+    --FS: 0.9rem;
   }
 }
 
-@media only screen and (max-width: 800px){
-  :root{
-    --FS:0.7rem
+@media only screen and (max-width: 800px) {
+  :root {
+    --FS: 0.7rem;
   }
 }
 
 @media only screen and (max-width: 720) {
-  section{
+  section {
     padding-left: 0.7rem;
     padding-right: 0.7rem;
   }
