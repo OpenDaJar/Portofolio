@@ -192,7 +192,3 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-// TEST
-const test = () => {
-  console.log("test");
-};

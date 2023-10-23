@@ -1,397 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A Portofolio Website">
-    <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <title>My Portofolio</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-  </head>
-  <body onload="onLoad()">
-    <div class="container">
-      <nav id="sidebar">
-        <section id="profile" class="sidebar__profile">
-          <figure id="figure">
-            <img
-              src="./img/M.svg"
-              alt="Profile Image"
-              class="figure__img"
-              width="150"
-              height="150"
-            />
-          </figure>
-        </section>
-        <section id="links" class="sidebar__links ">
-          <a id="links__about" href="#about">
-            <i class="fa-solid fa-circle-info"></i>
-            <span class="sidebar__text">About</span>
-          </a>
-          <a id="links__skills" href="#skills">
-            <i class="fa-solid fa-chart-simple"></i>
-            <span class="sidebar__text">Skills</span>
-            </a>
-          <a id="links__experience" href="#experience">
-            <i class="fa-solid fa-layer-group"></i>
-            <span class="sidebar__text">Experience</span></a>
-          <a id="links__contact" href="#contact">
-            <i class="fa-solid fa-address-book"></i>
-            <span class="sidebar__text">Contact</span></a>
-        </section>
-        <section id="media" class="sidebar__media">
-          <a
-            href="https://www.linkedin.com/in/michael-ladas-53a534277/"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin svg"></i
-          ></a>
-          <a href="https://github.com/OpenDaJar" target="_blank"
-            ><i class="fa-brands fa-square-github svg"></i
-          ></a>
-        </section>
-      </nav>
-      <!-- Btn expand -->
-      <button id="btn_expand" class="btn_expand" type="button" onclick="expandButton()">
-        <img
-          id="arrow_expand"
-          class="arrow_expand"
-          src="img/arrow_right_icon.svg"
-          alt="Expand Arrow"
-        />
-      </button>
 
-      <main id="main">
-        <!-- Welcome Message section -->
-        <section id="welcome" class="welcome main__section">
-          <h1>
-            Hi,
-            I'm Mike,</br>
-            Web Developer<span class="welcome__cursor">_</span></h1>
-          
-          <!-- <div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A Portofolio Website">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>My Portofolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+
+<body onload="onLoad()">
+  <div class="container">
+    <nav id="sidebar">
+      <section id="profile" class="sidebar__profile">
+        <figure id="figure">
+          <img src="./img/M.svg" alt="Profile Image" class="figure__img" width="150" height="150" />
+        </figure>
+      </section>
+      <section id="links" class="sidebar__links ">
+        <a id="links__about" href="#about">
+          <i class="fa-solid fa-circle-info"></i>
+          <span class="sidebar__text">About</span>
+        </a>
+        <a id="links__skills" href="#skills">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span class="sidebar__text">Skills</span>
+        </a>
+        <a id="links__experience" href="#experience">
+          <i class="fa-solid fa-layer-group"></i>
+          <span class="sidebar__text">Experience</span></a>
+        <a id="links__contact" href="#contact">
+          <i class="fa-solid fa-address-book"></i>
+          <span class="sidebar__text">Contact</span></a>
+      </section>
+      <section id="media" class="sidebar__media">
+        <a href="https://www.linkedin.com/in/michael-ladas-53a534277/" target="_blank"><i
+            class="fa-brands fa-linkedin svg"></i></a>
+        <a href="https://github.com/OpenDaJar" target="_blank"><i class="fa-brands fa-square-github svg"></i></a>
+      </section>
+    </nav>
+    <!-- Btn expand -->
+    <button id="btn_expand" class="btn_expand" type="button" onclick="expandButton()">
+      <img id="arrow_expand" class="arrow_expand" src="img/arrow_right_icon.svg" alt="Expand Arrow" />
+    </button>
+
+    <main id="main">
+      <!-- Welcome Message section -->
+      <section id="welcome" class="welcome main__section">
+        <h1>
+          Hi,
+          I'm Mike,</br>
+          Web Developer<span class="welcome__cursor">_</span></h1>
+
+        <!-- <div>
             <span id="welcome__changed" class="welcome__changed"></span>
             <span class="welcome__cursor">_</span>
             <span id="welcome__original" class="welcome__original"
               >Web Developer</span
             >
           </div> -->
-        </section>
-        <!-- About section -->
-        <section id="about" class="fade main__section">
-          <h2 class="section_header">About me</h2>
-          <div class="about-container ">
-            <article class="section_article glass">
-              <p>
-                As a self-driven Web Developer, I am highly motivated and
-                dedicated to honing my programming skills and creating
-                innovative web solutions. Programming is not just a profession
-                for me; it is a genuine passion that drives me to continuously
-                learn and improve. I am constantly seeking opportunities to
-                expand my knowledge and stay up-to-date with the latest industry
-                trends and technologies. Whether it's diving into new
-                programming languages, exploring cutting-edge frameworks or
-                experimenting with innovative techniques.
-              </p>
-              <p>
-                With a keen eye for detail and a focus on delivering
-                high-quality results, I strive to develop clean, efficient, and
-                user-friendly websites. I understand the importance of creating
-                seamless user experiences, ensuring that websites are visually
-                appealing, responsive, and optimized for performance.
-              </p>
-              <p>
-                Being a problem solver at heart, I enjoy tackling complex coding
-                challenges and finding elegant solutions. I am comfortable
-                working both independently and as part of a team, valuing
-                effective collaboration and communication to achieve project
-                goals.
-              </p>
-            </article>
-            
-          </div>
-        </section>
-        <section id="skills" class="fade main__section">
-          <h2 class="section_header">Skills</h2>
-          <div class="about-lists glass">
-            <!-- Languages -->
-            <section class="about__langs">
-              <h4>Languages</h4>
-              <ul>
-                <li>
-                  <img
-                    src="./img/languages logos/JavaScript.svg"
-                    alt="JS logo"
-                    class="about__img"
-                  />
-                  Javascript
-                </li>
-                <li>
-                  <img
-                    src="./img/languages logos/Typescript.svg"
-                    alt="TS logo"
-                    class="about__img"
-                  />
-                  Typescript
-                </li>
-                <li>
-                  <img
-                    src="./img/languages logos/HTML.svg"
-                    alt="HTML logo"
-                    class="about__img"
-                  />
-                  HTML
-                </li>
-                <li>
-                  <img
-                    src="./img/languages logos/CSS.svg"
-                    alt="CSS logo"
-                    class="about__img"
-                  />
-                  CSS
-                </li>
-                <li>
-                  <img
-                    src="./img/languages logos/Java.svg"
-                    alt="Java logo"
-                    class="about__img"
-                  />
-                  Java
-                </li>
-              </ul>
-            </section>
-            <!-- Libaries -->
-            <section class="about__libs">
-              <h4>Libraries</h4>
-              <ul>
-                <li>
-                  <img
-                    src="./img/languages logos/Rxjs.svg"
-                    alt="Rxjs logo"
-                    class="about__img"
-                  />
-                  RxJS
-                </li>
-                <li>
-                  <img
-                    src="./img/languages logos/Angular.svg"
-                    alt="Angular Material logo"
-                    class="about__img"
-                  />
-                  Angular Material
-                </li>
-              </ul>
-            </section>
-            <!-- RDBMS -->
-            <section class="about__rdbms">
-              <h4>RDBMS</h4>
-              <ul>
-                <li>
-                  <img
-                    src="./img/languages logos/MySQL.svg"
-                    alt="MySQL logo"
-                    class="about__img"
-                  />
-                  MySQL
-                </li>
-              </ul>
-            </section>
-            <!-- Frameworks -->
-            <section class="about__framework">
-              <h4>Frameworks</h4>
-              <ul>
-                <li>
-                  <img
-                    src="./img/languages logos/Angular.svg"
-                    alt="Angular logo"
-                    class="about__img"
-                  />
-                  Angular
-                </li>
-                <li>
-                  <img
-                    src="./img/languages logos/Bootstrap.svg"
-                    alt="Bootstrap logo"
-                    class="about__img"
-                  />
-                  Bootstrap
-                </li>
-              </ul>
-            </section>
-            <!-- Environments -->
-            <section class="about__envs">
-              <h4>Environments</h4>
-              <ul>
-                <li>
-                  <img
-                    src="./img/languages logos/NodeJS.svg"
-                    alt="Node.js logo"
-                    class="about__img"
-                  />
-                  Node.js
-                </li>
-              </ul>
-            </section>
-          </div>
-        </section>
-        <!-- Experience section -->
-        <section id="experience" class="fade main__section">
-          <h2 class="section_header">Experience</h2>
-          <div class="experience glass">
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-              <!-- Full-width images with number and caption text -->
-              <!-- Caption 1: Chick 'n' Run -->
-              <div class="mySlides fade-caption">
-                <article class="mySlides__desc">
-                  <h4>Chick 'n' Run</h4>
-                  <p>
-                    An endless runner game made with Unity requires players to
-                    jump and avoid enemies. The game features dynamically
-                    generated environments and a scoring system. It offers
-                    fast-paced and exciting gameplay.
-                  </p>
-                  <span>
-                    &#8594
-                  </span>
-                  <a
-                    href="https://github.com/OpenDaJar/Chick-n-Run"
-                    target="_blank"
-                    >Github Link</a
-                  >
-                </article>
-                <span class="mySlides__desc center">1 / 3</span>
-                <img
-                  src="./img/chick n run/chick2.jpg"
-                  alt="chick 'n' Run img"
-                  class="slider__img"
-                />
-                <img
-                  src="./img/chick n run/chick3.jpg"
-                  alt="chick 'n' Run img"
-                  class="slider__img"
-                />
-              </div>
-              <!-- Caption 2: CovidInfoGR -->
-              <div class="mySlides fade-caption">
-                <article class="mySlides__desc">
-                  <h4>CovidInfoGR</h4>
-                  <p>
-                    A small informative application about the status of COVID-19
-                    Pandemic in Greece. We also used MPAndroidChart in order to
-                    make some diagrams. Also, implemented some swipe-top and
-                    swipe-bottom gestures to make navigation a bit faster.
-                  </p>
-                  <span>
-                    &#8594 
-                  </span>
-                  <a
-                    href="https://github.com/OpenDaJar/COVIDInfoGR"
-                    target="_blank"
-                    >Github Link</a
-                  >
-                </article>
-                <span class="mySlides__desc center">2 / 3</span>
-                <img
-                  src="./img/covidGR/mainMap.png"
-                  alt="CovidInfoGR img"
-                  class="slider__img"
-                />
-                <img
-                  src="./img/covidGR/stats_greek1.png"
-                  alt="CovidInfoGR img"
-                  class="slider__img"
-                />
-                <img
-                  src="./img/covidGR/stats_greek2.png"
-                  alt="CovidInfoGR img"
-                  class="slider__img"
-                />
-                <img
-                  src="./img/covidGR/stats_worlwide1.png"
-                  alt="CovidInfoGR img"
-                  class="slider__img"
-                />
-                <img
-                  src="./img/covidGR/stats_worlwide2.png"
-                  alt="CovidInfoGR img"
-                  class="slider__img"
-                />
-              </div>
-              <!-- Caption 3 -->
-              <div class="mySlides fade-caption">
-                <article class="mySlides__desc">
-                  <h4>Hotel Manager webapp</h4>
-                  <p>
-                    A small scale project build using Angular and Nodejs to
-                    manage rooms and bookings. It also provides user
-                    authentication.
-                  </p>
-                  <span>
-                    &#8594 
-                  </span>
-                  <a
-                    href="https://github.com/OpenDaJar/hotelmanagerwebapp"
-                    target="_blank"
-                    >Github Link</a
-                  >
-                </article>
-                <span class="mySlides__desc center">3 / 3</span>
-                <img
-                  src="./img/booker/addroom.png"
-                  alt="Booker img"
-                  class="slider__img"
-                />
-                <img
-                  src="./img/booker/roomlist.png"
-                  alt="Booker img"
-                  class="slider__img"
-                />
-                <img
-                  src="./img/booker/addbooking.png"
-                  alt="Booker img"
-                  class="slider__img"
-                />
-              </div>
+      </section>
+      <!-- About section -->
+      <section id="about" class="fade main__section">
+        <h2 class="section_header">About me</h2>
+        <div class="about-container ">
+          <article class="section_article glass">
+            <p>
+              As a self-driven Web Developer, I am highly motivated and
+              dedicated to honing my programming skills and creating
+              innovative web solutions. Programming is not just a profession
+              for me; it is a genuine passion that drives me to continuously
+              learn and improve. I am constantly seeking opportunities to
+              expand my knowledge and stay up-to-date with the latest industry
+              trends and technologies. Whether it's diving into new
+              programming languages, exploring cutting-edge frameworks or
+              experimenting with innovative techniques.
+            </p>
+            <p>
+              With a keen eye for detail and a focus on delivering
+              high-quality results, I strive to develop clean, efficient, and
+              user-friendly websites. I understand the importance of creating
+              seamless user experiences, ensuring that websites are visually
+              appealing, responsive, and optimized for performance.
+            </p>
+            <p>
+              Being a problem solver at heart, I enjoy tackling complex coding
+              challenges and finding elegant solutions. I am comfortable
+              working both independently and as part of a team, valuing
+              effective collaboration and communication to achieve project
+              goals.
+            </p>
+          </article>
 
-              <!-- Next and previous buttons -->
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+      </section>
+      <section id="skills" class="fade main__section">
+        <h2 class="section_header">Skills</h2>
+        <div class="about-lists glass">
+          <!-- Languages -->
+          <section class="about__langs">
+            <h4>Languages</h4>
+            <ul>
+              <li>
+                <img src="./img/languages logos/JavaScript.svg" alt="JS logo" class="about__img" />
+                Javascript
+              </li>
+              <li>
+                <img src="./img/languages logos/Typescript.svg" alt="TS logo" class="about__img" />
+                Typescript
+              </li>
+              <li>
+                <img src="./img/languages logos/HTML.svg" alt="HTML logo" class="about__img" />
+                HTML
+              </li>
+              <li>
+                <img src="./img/languages logos/CSS.svg" alt="CSS logo" class="about__img" />
+                CSS
+              </li>
+              <li>
+                <img src="./img/languages logos/Java.svg" alt="Java logo" class="about__img" />
+                Java
+              </li>
+            </ul>
+          </section>
+          <!-- Libaries -->
+          <section class="about__libs">
+            <h4>Libraries</h4>
+            <ul>
+              <li>
+                <img src="./img/languages logos/Rxjs.svg" alt="Rxjs logo" class="about__img" />
+                RxJS
+              </li>
+              <li>
+                <img src="./img/languages logos/Angular.svg" alt="Angular Material logo" class="about__img" />
+                Angular Material
+              </li>
+            </ul>
+          </section>
+          <!-- RDBMS -->
+          <section class="about__rdbms">
+            <h4>RDBMS</h4>
+            <ul>
+              <li>
+                <img src="./img/languages logos/MySQL.svg" alt="MySQL logo" class="about__img" />
+                MySQL
+              </li>
+            </ul>
+          </section>
+          <!-- Frameworks -->
+          <section class="about__framework">
+            <h4>Frameworks</h4>
+            <ul>
+              <li>
+                <img src="./img/languages logos/Angular.svg" alt="Angular logo" class="about__img" />
+                Angular
+              </li>
+              <li>
+                <img src="./img/languages logos/Bootstrap.svg" alt="Bootstrap logo" class="about__img" />
+                Bootstrap
+              </li>
+            </ul>
+          </section>
+          <!-- Environments -->
+          <section class="about__envs">
+            <h4>Environments</h4>
+            <ul>
+              <li>
+                <img src="./img/languages logos/NodeJS.svg" alt="Node.js logo" class="about__img" />
+                Node.js
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <!-- Experience section -->
+      <section id="experience" class="fade main__section">
+        <h2 class="section_header">Experience</h2>
+        <div class="experience glass">
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <!-- Caption 1: Pame Super -->
+            <div class="mySlides fade-caption">
+              <article class="mySlides__desc">
+                <h4>Pame Super</h4>
+                <p>
+                  A Full-Stack Web application enabling real-time supermarket product searches based on keywords,
+                  offering live pricing models. Implemented a user-friendly cart management system, allowing users to
+                  add products from various
+                  supermarkets. Utilized Angular for web development and extended the application to Android using
+                  Capacitor.
+                </p>
+                <span>
+                  &#8594
+                </span>
+                <a href="https://play.google.com/store/apps/details?id=tech.steveslab.pamesuper" target="_blank">Play
+                  Store Link</a>
+              </article>
+              <span class="mySlides__desc center">1 / 4</span>
+              <img src="./img/pame super/search.jpg" alt="Pame Sumer img" class="slider__img" />
+              <img src="./img/pame super/cart.jpg" alt="Pame Sumer img" class="slider__img" />
+              <img src="./img/pame super/options.jpg" alt="Pame Sumer img" class="slider__img" />
             </div>
+            <!-- Caption 2: Chick 'n' Run -->
+            <div class="mySlides fade-caption">
+              <article class="mySlides__desc">
+                <h4>Chick 'n' Run</h4>
+                <p>
+                  An endless runner game made with Unity requires players to
+                  jump and avoid enemies. The game features dynamically
+                  generated environments and a scoring system. It offers
+                  fast-paced and exciting gameplay.
+                </p>
+                <span>
+                  &#8594
+                </span>
+                <a href="https://github.com/OpenDaJar/Chick-n-Run" target="_blank">Github Link</a>
+              </article>
+              <span class="mySlides__desc center">2 / 4</span>
+              <img src="./img/chick n run/chick2.jpg" alt="chick 'n' Run img" class="slider__img" />
+              <img src="./img/chick n run/chick3.jpg" alt="chick 'n' Run img" class="slider__img" />
+            </div>
+            <!-- Caption 3: CovidInfoGR -->
+            <div class="mySlides fade-caption">
+              <article class="mySlides__desc">
+                <h4>CovidInfoGR</h4>
+                <p>
+                  A small informative application about the status of COVID-19
+                  Pandemic in Greece. We also used MPAndroidChart in order to
+                  make some diagrams. Also, implemented some swipe-top and
+                  swipe-bottom gestures to make navigation a bit faster.
+                </p>
+                <span>
+                  &#8594
+                </span>
+                <a href="https://github.com/OpenDaJar/COVIDInfoGR" target="_blank">Github Link</a>
+              </article>
+              <span class="mySlides__desc center">3 / 4</span>
+              <img src="./img/covidGR/mainMap.png" alt="CovidInfoGR img" class="slider__img" />
+              <img src="./img/covidGR/stats_greek1.png" alt="CovidInfoGR img" class="slider__img" />
+              <img src="./img/covidGR/stats_greek2.png" alt="CovidInfoGR img" class="slider__img" />
+              <img src="./img/covidGR/stats_worlwide1.png" alt="CovidInfoGR img" class="slider__img" />
+              <img src="./img/covidGR/stats_worlwide2.png" alt="CovidInfoGR img" class="slider__img" />
+            </div>
+            <!-- Caption 4 -->
+            <div class="mySlides fade-caption">
+              <article class="mySlides__desc">
+                <h4>Hotel Manager webapp</h4>
+                <p>
+                  A small scale project build using Angular and Nodejs to
+                  manage rooms and bookings. It also provides user
+                  authentication.
+                </p>
+                <span>
+                  &#8594
+                </span>
+                <a href="https://github.com/OpenDaJar/hotelmanagerwebapp" target="_blank">Github Link</a>
+              </article>
+              <span class="mySlides__desc center">4 / 4</span>
+              <img src="./img/booker/addroom.png" alt="Booker img" class="slider__img" />
+              <img src="./img/booker/roomlist.png" alt="Booker img" class="slider__img" />
+              <img src="./img/booker/addbooking.png" alt="Booker img" class="slider__img" />
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
-          <!-- The dots/circles -->
-          <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-        </section>
-        <!-- Contact section -->
-        <section id="contact" class="fade main__section">
-          <h2 class="section_header">Contact Me</h2>
-          <div class="glass contact">
-            <span>
-              <img src="img/envelope-regular.svg" alt="Email img" class="contact__img">0.mikelad@gmail.com
-            </span>
-            <span>
-              <img src="img/linkedin.svg" alt="Linkedin img" class="contact__img"> 
-              <a href="https://www.linkedin.com/in/michael-ladas-53a534277/" target="_blank">Linkdin Profile</a>
-            </span>
-            <span>
-              <img src="img/square-github.svg" alt="Github img" class="contact__img">
-              <a href="https://github.com/OpenDaJar" target="_blank">Github Profile</a>
-            </span>
-          </div>
-        </section>
-      </main>
-    </div>
-    <!-- Btn scroll top -->
-    <a href="#welcome">
-      <i id="arrow-top" class="fa-solid fa-angles-up svg scroll-top-btn"></i
-    ></a>
-    <script src="myscripts.js" type="text/javascript"></script>
-  </body>
+        </div>
+        <!-- The dots/circles -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+
+        </div>
+      </section>
+      <!-- Contact section -->
+      <section id="contact" class="fade main__section">
+        <h2 class="section_header">Contact Me</h2>
+        <div class="glass contact">
+          <span>
+            <img src="img/envelope-regular.svg" alt="Email img" class="contact__img">0.mikelad@gmail.com
+          </span>
+          <span>
+            <img src="img/linkedin.svg" alt="Linkedin img" class="contact__img">
+            <a href="https://www.linkedin.com/in/michael-ladas-53a534277/" target="_blank">Linkdin Profile</a>
+          </span>
+          <span>
+            <img src="img/square-github.svg" alt="Github img" class="contact__img">
+            <a href="https://github.com/OpenDaJar" target="_blank">Github Profile</a>
+          </span>
+        </div>
+      </section>
+    </main>
+  </div>
+  <!-- Btn scroll top -->
+  <a href="#welcome">
+    <i id="arrow-top" class="fa-solid fa-angles-up svg scroll-top-btn"></i></a>
+  <script src="myscripts.js" type="text/javascript"></script>
+</body>
+
 </html>
